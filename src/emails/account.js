@@ -7,7 +7,12 @@ const sendWelcomeEmail = (email, name) => {
         to: email,
         from: 'sashazab21@gmail.com',
         subject: 'Welcome!',
-        text: `Welcome to the app, ${name} Let me know how you get along with the app.`
+        text: `Welcome to the app, ${name} Let me know how you get along with the app.`,
+        mailSettings: {
+            sandboxMode: {
+                enable: true
+            }
+        }
     })
 }
 
